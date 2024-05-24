@@ -1,13 +1,16 @@
 import numpy as np
+
+
 class Cost:
 
     @staticmethod
     def theorem_3(base, extra):
-        return 4 * (base - 1) ** 2 + 96 * base + 32 * extra - 208 - 64 * (base - 2)
+        return 4 * (base - 1) ** 2 + 32 * extra + 16 * base - 48
 
     @staticmethod
     def theorem_1(base, extra):
-        return -28 * (base - 1) ** 2 + 2 * (base - 1) * (16 * extra - 40)
+        nt = base - 1
+        return -28 * nt ** 2 + 2 * nt * (16 * extra - 40)
 
     @staticmethod
     def exact_decomposition(n):
@@ -32,5 +35,3 @@ class Cost:
         if n_ctrl == n - k - 1:
             return 0
         return 32 * (n - i) - 76 + Cost.c_barenco_rec(n, i + 1, k)
-
-
