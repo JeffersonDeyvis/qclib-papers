@@ -1,4 +1,4 @@
-Comparisons for 'Y' gate
+Comparisons for 'Y' gate (50 rounds)
 
 Error  0.1
 N_extra  1
